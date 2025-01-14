@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  print("Hello Dart");
+
+  var car = Car(4);
+  car.carType();
+  car.wheelsNum();
+
   //runApp(const MyApp());
 }
 
 
 abstract class Vehicule {
-  int wheels = 10;
+  Vehicule(this.wheels);
+  int wheels;
   void wheelsNum();
 }
 
 class Car extends Vehicule {
+  Car(super.wheels);
+
   void carType() {
     print("land runner");
   }
